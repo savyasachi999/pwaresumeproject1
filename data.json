@@ -1,0 +1,61 @@
+{
+  "details":{
+    "image": "sss.jpg",
+    "name": "savyasachi",
+    "phno": "9177634326",
+    "email": "savyasachi999@gmail.com",
+    "address":"SRKR engineering college"
+
+
+},
+"carrer":
+{
+  "info": "Good at communication skills and coding skills "
+},
+"education":[{
+  "degree": "Btech",
+  "institute": "SRKR college",
+  "date":["2016-2020,88%"]
+},
+{
+  "degree": "Intermediate",
+  "institute": "sasi",
+  "date": ["2014-2016","98%"]
+},
+{
+  "degree": "SSC",
+  "institute": "sfs",
+  "date":["2013-2014","92%"]
+}
+
+],
+"keyskills":[
+{
+  "title": "programming languages:",
+  "info": ["c,c++,java,python,ruby"]
+},
+{
+"title": "operating systems:",
+"info" : ["windows,linux,mac,ubuntu,dos"]
+
+},
+{
+  "title":"Databases:",
+  "info": ["oracle,sql,mysql"]
+
+}
+
+],
+
+"achievements":
+{
+
+  "one":"got first prize in ppt presentation",
+  "two": "body member in iste,head of csi",
+  "three":"got 3rd prize in code vita"
+
+
+
+
+}
+}
