@@ -1,15 +1,16 @@
-function Loadjson(file,callback){
-  var x = new XMLHttpRequest();
-  x.overrideMimeType("application/json");
-  x.open("GET",file,true);
-  x.onreadystatechange = function(){
-  if(x.readyState===4 && x.status == "200"){
-    callback(x.responseText);
-  }
-};
-x.send(null);
-}
-Loadjson("data.json", function(text){
+//function Loadjson(file,callback){
+  //var x = new XMLHttpRequest();
+  //x.overrideMimeType("application/json");
+  //x.open("GET",file,true);
+  //x.onreadystatechange = function(){
+  //if(x.readyState===4 && x.status == "200"){
+  //  callback(x.responseText);
+  //}
+//};
+//x.send(null);
+//}
+
+/*  Loadjson("data.json", function(text){
   var data = JSON.parse(text);
   console.log(data);
   basics(data.details);
@@ -17,7 +18,32 @@ Loadjson("data.json", function(text){
   education(data.education);
   keyskills(data.keyskills);
   achievements(data.achievements);
-})
+})*/
+function loadjson(file)
+{
+  return new Promise((resolve,reject)=>{
+    return fetch(file).then(response=>{
+      if(response.ok){
+        resolve(response.json());
+      }else{
+        reject(new Error('error'));
+      }
+    })
+  })
+}
+
+var file=loadjson("data.json");
+file.then(data=>{
+  console.log(data);
+  basics(data.details);
+  carrerinfo(data.carrer);
+  education(data.education);
+  keyskills(data.keyskills);
+  achievements(data.achievements);
+}
+)
+
+
 var child1 = document.querySelector(".child1");
 function basics(det){
   var image = document.createElement("img");
